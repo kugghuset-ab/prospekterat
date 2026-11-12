@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<!-- Prospekterat favicon: förenklat emblem (ring, kugg, hus, torn). Kugghuset-palett. -->
+<circle cx="32" cy="32" r="32" fill="#0E1530"/>
+<circle cx="32" cy="34.5" r="21.5" fill="none" stroke="#FFFFFF" stroke-width="3.6"/>
+<circle cx="32" cy="11.5" r="11.4" fill="#0E1530"/>
+<path d="M32.00 3.10 L35.21 3.74 L34.37 5.77 L36.38 7.12 L37.94 5.56 L39.76 8.29 L37.73 9.13 L38.20 11.50 L40.40 11.50 L39.76 14.71 L37.73 13.87 L36.38 15.88 L37.94 17.44 L35.21 19.26 L34.37 17.23 L32.00 17.70 L32.00 19.90 L28.79 19.26 L29.63 17.23 L27.62 15.88 L26.06 17.44 L24.24 14.71 L26.27 13.87 L25.80 11.50 L23.60 11.50 L24.24 8.29 L26.27 9.13 L27.62 7.12 L26.06 5.56 L28.79 3.74 L29.63 5.77 L32.00 5.30 Z M29.40 11.50 a2.60 2.60 0 1 0 5.20 0 a2.60 2.60 0 1 0 -5.20 0 Z" fill="#FFFFFF" fill-rule="evenodd"/>
+<path d="M17.5 42 L25 35 L32.5 42 L32.5 54 L17.5 54 Z" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linejoin="round"/>
+<rect x="36.5" y="33.5" width="10.5" height="20.5" fill="none" stroke="#FFFFFF" stroke-width="3.6" stroke-linejoin="round"/>
+</svg>

@@ -8,22 +8,31 @@
       content="Prospekterat hjälper fastighetsköpare och investerare hitta, analysera och boka nästa affär i Sverige."
     />
     <title>Prospekterat · Datatrolleri för fastigheter</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#0e1530" />
+    <link rel="stylesheet" href="styles.css?v=20260907" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Hanken+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Hanken+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <header class="site-header">
       <div class="wrap header-inner">
-        <a class="brand" href="#">Prospekterat</a>
-        <nav>
+        <a class="brand" href="/" aria-label="Prospekterat startsida">
+          <img class="brand-mark" src="/logo-emblem.svg?v=20260907" alt="" width="64" height="64" />
+          <span>Prospekterat</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Meny <span aria-hidden="true">☰</span></button>
+        <nav id="site-nav" aria-label="Huvudnavigation">
           <a href="#tjanster">Tjänster</a>
           <a href="#process">Process</a>
           <a href="#kontakt">Kontakt</a>
+          <a class="nav-cta" href="#kontakt">Boka genomgång <span aria-hidden="true">→</span></a>
         </nav>
       </div>
     </header>
@@ -111,5 +120,27 @@
     <footer>
       <div class="wrap">© 2026 Prospekterat AB · Stockholm</div>
     </footer>
+    <script>
+      const menuToggle = document.querySelector('.menu-toggle');
+      const siteNav = document.querySelector('#site-nav');
+      function closeMenu() {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        siteNav.classList.remove('is-open');
+      }
+      menuToggle.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') !== 'true';
+        menuToggle.setAttribute('aria-expanded', String(expanded));
+        siteNav.classList.toggle('is-open', expanded);
+      });
+      siteNav.addEventListener('click', event => {
+        if (event.target.closest('a')) closeMenu();
+      });
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+          closeMenu();
+          menuToggle.focus();
+        }
+      });
+    </script>
   </body>
 </html>
